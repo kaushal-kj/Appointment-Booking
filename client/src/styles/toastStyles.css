@@ -1,0 +1,136 @@
+/* Base toast container styling */
+.Toastify__toast-container {
+  z-index: 9999;
+  font-family: inherit;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  min-height: 64px;
+  font-family: inherit;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.Toastify__toast-body {
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.Toastify__close-button {
+  align-self: flex-start;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Success Toast Theme */
+.toast-success {
+  background: linear-gradient(135deg, #3a4c46 0%, #37d1a1 100%);
+  color: white;
+}
+
+.toast-progress-success {
+  background: linear-gradient(90deg, #065f46, #047857);
+}
+
+/* Error Toast Theme */
+.toast-error {
+  background: linear-gradient(135deg, #635a5a 0%, #ef3d3d 100%);
+  color: white;
+}
+
+.toast-progress-error {
+  background: linear-gradient(90deg, #991b1b, #b91c1c);
+}
+
+/* Warning Toast Theme */
+.toast-warning {
+  background: linear-gradient(135deg, #544c3e 0%, #cc8636 100%);
+  color: white;
+}
+
+.toast-progress-warning {
+  background: linear-gradient(90deg, #92400e, #b45309);
+}
+
+/* Info Toast Theme */
+.toast-info {
+  background: linear-gradient(135deg, #3d4655 0%, #3c6dd6 100%);
+  color: white;
+}
+
+.toast-progress-info {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+}
+
+/* Teacher Theme (Cyan) */
+.toast-teacher {
+  background: linear-gradient(135deg, #415457 0%, #1da7ca 100%);
+  color: white;
+}
+
+.toast-progress-teacher {
+  background: linear-gradient(90deg, #155e75, #0e7490);
+}
+
+/* Student Theme (Violet) */
+.toast-student {
+  background: linear-gradient(135deg, #3e3553 0%, #7e48db 100%);
+  color: white;
+}
+
+.toast-progress-student {
+  background: linear-gradient(90deg, #5b21b6, #6d28d9);
+}
+
+/* Admin Theme (Orange) */
+.toast-admin {
+  background: linear-gradient(135deg, #554336 0%, #db6728 100%);
+  color: white;
+}
+
+.toast-progress-admin {
+  background: linear-gradient(90deg, #c2410c, #dc2626);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .Toastify__toast {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Animation enhancements */
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.Toastify__toast--top-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Hover effects */
+.Toastify__toast:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Progress bar styling */
+.Toastify__progress-bar {
+  height: 4px;
+  border-radius: 0 0 12px 12px;
+}
