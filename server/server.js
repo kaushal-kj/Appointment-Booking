@@ -3,6 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 
+// 🔥 ADD THESE 2 LINES ONLY
+process.env.TZ = 'Asia/Kolkata';
+Date.prototype.toJSON = function() { return this.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}); };
+
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
