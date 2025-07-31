@@ -254,8 +254,10 @@ const MyAppointments = () => {
                     <span className="text-xs">
                       Updated:{" "}
                       {lastUpdated.toLocaleTimeString("en-US", {
-                        hour: "2-digit",
+                        hour: "numeric",
                         minute: "2-digit",
+                        hour12: true,
+                        timeZone: "Asia/Kolkata",
                       })}
                     </span>
                   )}
@@ -543,21 +545,21 @@ const MyAppointments = () => {
               )}
             </div>
           </div>
-      {/* Search Results Info */}
-            {searchTerm && (
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
-                <div className="flex items-center space-x-2">
-                  <FiSearch className="text-blue-600 font-medium text-2xl sm:text-lg" />
-                  <span className="text-blue-800 font-medium">
-                    {getSearchResultsCount() === 0
-                      ? `No teachers found for "${searchTerm}"`
-                      : `Found ${getSearchResultsCount()} teacher${
-                          getSearchResultsCount() > 1 ? "s" : ""
-                        } matching "${searchTerm}"`}
-                  </span>
-                </div>
+          {/* Search Results Info */}
+          {searchTerm && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
+              <div className="flex items-center space-x-2">
+                <FiSearch className="text-blue-600 font-medium text-2xl sm:text-lg" />
+                <span className="text-blue-800 font-medium">
+                  {getSearchResultsCount() === 0
+                    ? `No teachers found for "${searchTerm}"`
+                    : `Found ${getSearchResultsCount()} teacher${
+                        getSearchResultsCount() > 1 ? "s" : ""
+                      } matching "${searchTerm}"`}
+                </span>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -706,6 +708,7 @@ const MyAppointments = () => {
                             year: "numeric",
                             month: "long",
                             day: "numeric",
+                            timeZone: "Asia/Kolkata",
                           })}
                         </span>
                       </div>
@@ -721,8 +724,10 @@ const MyAppointments = () => {
                           }`}
                         >
                           {appointmentDate.toLocaleTimeString("en-US", {
-                            hour: "2-digit",
+                            hour: "numeric",
                             minute: "2-digit",
+                            hour12: true,
+                            timeZone: "Asia/Kolkata",
                           })}
                         </span>
                       </div>

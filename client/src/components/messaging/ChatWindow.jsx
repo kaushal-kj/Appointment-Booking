@@ -83,8 +83,10 @@ const ChatWindow = ({ receiver, onBack }) => {
 
     if (diffInHours < 24) {
       return messageTime.toLocaleTimeString([], {
-        hour: "2-digit",
+        hour: "numeric",
         minute: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Kolkata",
       });
     } else {
       return messageTime.toLocaleDateString([], {
@@ -92,6 +94,7 @@ const ChatWindow = ({ receiver, onBack }) => {
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
+        timeZone: "Asia/Kolkata",
       });
     }
   };

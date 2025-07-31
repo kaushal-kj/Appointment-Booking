@@ -236,12 +236,15 @@ const BookForm = ({ teacher, close }) => {
                                   month: "short",
                                   day: "numeric",
                                   year: "numeric",
+                                  timeZone: "Asia/Kolkata",
                                 })}
                               </div>
                               <div className="text-sm text-green-600 font-medium">
                                 {slotDate.toLocaleTimeString("en-US", {
-                                  hour: "2-digit",
+                                  hour: "numeric",
                                   minute: "2-digit",
+                                  hour12: true,
+                                  timeZone: "Asia/Kolkata",
                                 })}
                               </div>
                             </div>

@@ -61,7 +61,7 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
       const res = await axios.get("/admin/students", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
-      
+
       setStudents(res.data.data || res.data || []);
       setLastUpdated(new Date());
     } catch (error) {
@@ -120,9 +120,7 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
-      showToast.admin(
-        `${studentToDelete.name} has been deleted successfully`
-      );
+      showToast.admin(`${studentToDelete.name} has been deleted successfully`);
       fetchStudents(false);
       if (onStudentUpdate) onStudentUpdate();
 
@@ -298,8 +296,10 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
                   <span className="text-xs">
                     Updated:{" "}
                     {lastUpdated.toLocaleTimeString("en-US", {
-                      hour: "2-digit",
+                      hour: "numeric",
                       minute: "2-digit",
+                      hour12: true,
+                      timeZone: "Asia/Kolkata",
                     })}
                   </span>
                 </>
@@ -309,8 +309,6 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
 
           {/* Controls Section - Mobile First Design */}
           <div className="space-y-3 md:space-y-0">
-            
-
             {/* Filter and Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
               <div className="flex gap-2 flex-col sm:flex-row">
@@ -522,20 +520,20 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
             </div>
           </div>
           {/* Search Results Info */}
-            {searchTerm && (
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
-                <div className="flex items-center space-x-2">
-                  <FiSearch className="text-blue-600" />
-                  <span className="text-blue-800 font-medium">
-                    {filteredStudents.length === 0
-                      ? `No teachers found for "${searchTerm}"`
-                      : `Found ${filteredStudents.length} teacher${
-                          filteredStudents.length > 1 ? "s" : ""
-                        } matching "${searchTerm}"`}
-                  </span>
-                </div>
+          {searchTerm && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
+              <div className="flex items-center space-x-2">
+                <FiSearch className="text-blue-600" />
+                <span className="text-blue-800 font-medium">
+                  {filteredStudents.length === 0
+                    ? `No teachers found for "${searchTerm}"`
+                    : `Found ${filteredStudents.length} teacher${
+                        filteredStudents.length > 1 ? "s" : ""
+                      } matching "${searchTerm}"`}
+                </span>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -675,6 +673,7 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
                                     month: "short",
                                     day: "numeric",
                                     year: "numeric",
+                                    timeZone: "Asia/Kolkata",
                                   })}
                                 </div>
                                 <div className="text-slate-400">
@@ -916,6 +915,7 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
                             year: "numeric",
                             month: "long",
                             day: "numeric",
+                            timeZone: "Asia/Kolkata",
                           }
                         )}
                       </div>
@@ -941,14 +941,17 @@ const StudentListAdmin = ({ refreshTrigger, onStudentUpdate }) => {
                               year: "numeric",
                               month: "long",
                               day: "numeric",
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                           <div className="text-xs text-slate-500 mt-1">
                             {new Date(
                               selectedStudent.lastLogin
                             ).toLocaleTimeString("en-US", {
-                              hour: "2-digit",
+                              hour: "numeric",
                               minute: "2-digit",
+                              hour12: true,
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                         </div>

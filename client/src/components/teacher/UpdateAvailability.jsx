@@ -263,6 +263,7 @@ const UpdateAvailability = ({ onSlotAdded }) => {
                             month: "short",
                             day: "numeric",
                             year: "numeric",
+                            timeZone: "Asia/Kolkata"
                           })}
                         </div>
                         <div
@@ -271,8 +272,10 @@ const UpdateAvailability = ({ onSlotAdded }) => {
                           }`}
                         >
                           {slotDate.toLocaleTimeString("en-US", {
-                            hour: "2-digit",
-                            minute: "2-digit",
+                            hour: "numeric",
+                                  minute: "2-digit",
+                                  hour12: true,
+                                  timeZone: "Asia/Kolkata",
                           })}
                           {isExpiring && " • Expiring soon"}
                         </div>

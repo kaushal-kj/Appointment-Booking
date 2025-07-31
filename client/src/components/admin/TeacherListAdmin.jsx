@@ -120,7 +120,7 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
       const res = await axios.get("/admin/teachers", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
-      
+
       setTeachers(res.data.data || res.data || []);
       setLastUpdated(new Date());
     } catch (error) {
@@ -180,9 +180,7 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
-      showToast.admin(
-        `${teacherToDelete.name} has been deleted successfully`
-      );
+      showToast.admin(`${teacherToDelete.name} has been deleted successfully`);
       fetchTeachers(false);
       if (onTeacherRemoved) onTeacherRemoved();
 
@@ -287,8 +285,8 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
     );
   }
 
-  return ( 
-    <section >
+  return (
+    <section>
       {/* Mobile-Responsive Section Header */}
       <div className="bg-white rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100 mb-4">
         <div className="space-y-4">
@@ -314,8 +312,10 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
                   <span className="text-xs">
                     Updated:{" "}
                     {lastUpdated.toLocaleTimeString("en-US", {
-                      hour: "2-digit",
+                      hour: "numeric",
                       minute: "2-digit",
+                      hour12: true,
+                      timeZone: "Asia/Kolkata",
                     })}
                   </span>
                 </>
@@ -645,20 +645,20 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
             </div>
           </div>
           {/* Search Results Info */}
-            {searchTerm && (
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
-                <div className="flex items-center space-x-2">
-                  <FiSearch className="text-blue-600" />
-                  <span className="text-blue-800 font-medium">
-                    {filteredTeachers.length === 0
-                      ? `No teachers found for "${searchTerm}"`
-                      : `Found ${filteredTeachers.length} teacher${
-                          filteredTeachers.length > 1 ? "s" : ""
-                        } matching "${searchTerm}"`}
-                  </span>
-                </div>
+          {searchTerm && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
+              <div className="flex items-center space-x-2">
+                <FiSearch className="text-blue-600" />
+                <span className="text-blue-800 font-medium">
+                  {filteredTeachers.length === 0
+                    ? `No teachers found for "${searchTerm}"`
+                    : `Found ${filteredTeachers.length} teacher${
+                        filteredTeachers.length > 1 ? "s" : ""
+                      } matching "${searchTerm}"`}
+                </span>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -797,6 +797,7 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
                                     month: "short",
                                     day: "numeric",
                                     year: "numeric",
+                                    timeZone: "Asia/Kolkata",
                                   })}
                                 </div>
                                 <div className="text-slate-400">
@@ -1032,6 +1033,7 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
                             year: "numeric",
                             month: "long",
                             day: "numeric",
+                            timeZone: "Asia/Kolkata",
                           }
                         )}
                       </div>
@@ -1057,14 +1059,17 @@ const TeacherListAdmin = ({ refreshTrigger, onTeacherRemoved }) => {
                               year: "numeric",
                               month: "long",
                               day: "numeric",
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                           <div className="text-xs text-slate-500 mt-1">
                             {new Date(
                               selectedTeacher.lastLogin
                             ).toLocaleTimeString("en-US", {
-                              hour: "2-digit",
+                              hour: "numeric",
                               minute: "2-digit",
+                              hour12: true,
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                         </div>

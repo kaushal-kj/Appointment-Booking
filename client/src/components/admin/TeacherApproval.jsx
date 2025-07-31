@@ -136,8 +136,10 @@ const TeacherApproval = ({ refreshTrigger, onApproval }) => {
                 <span className="text-xs">
                   Updated:{" "}
                   {lastUpdated.toLocaleTimeString("en-US", {
-                    hour: "2-digit",
+                    hour: "numeric",
                     minute: "2-digit",
+                    hour12: true,
+                    timeZone: "Asia/Kolkata",
                   })}
                 </span>
               )}
@@ -192,23 +194,22 @@ const TeacherApproval = ({ refreshTrigger, onApproval }) => {
               <FiRefreshCw className="text-slate-600 group-hover:rotate-180 transition-transform duration-300" />
             </button>
           </div>
-          
         </div>
         {/* Search Results Info */}
-            {searchTerm && (
-              <div className="bg-blue-50 border border-blue-200 rounded-xl mt-2 p-3">
-                <div className="flex items-center space-x-2">
-                  <FiSearch className="text-blue-600" />
-                  <span className="text-blue-800 font-medium">
-                    {filteredTeachers.length === 0
-                      ? `No teachers found for "${searchTerm}"`
-                      : `Found ${filteredTeachers.length} teacher${
-                          filteredTeachers.length > 1 ? "s" : ""
-                        } matching "${searchTerm}"`}
-                  </span>
-                </div>
-              </div>
-            )}
+        {searchTerm && (
+          <div className="bg-blue-50 border border-blue-200 rounded-xl mt-2 p-3">
+            <div className="flex items-center space-x-2">
+              <FiSearch className="text-blue-600" />
+              <span className="text-blue-800 font-medium">
+                {filteredTeachers.length === 0
+                  ? `No teachers found for "${searchTerm}"`
+                  : `Found ${filteredTeachers.length} teacher${
+                      filteredTeachers.length > 1 ? "s" : ""
+                    } matching "${searchTerm}"`}
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Teachers List */}

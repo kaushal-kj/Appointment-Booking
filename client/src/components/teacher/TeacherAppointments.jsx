@@ -268,8 +268,10 @@ const TeacherAppointments = ({ refreshTrigger, onStatusUpdate }) => {
                     <span className="text-xs">
                       Updated:{" "}
                       {lastUpdated.toLocaleTimeString("en-US", {
-                        hour: "2-digit",
+                        hour: "numeric",
                         minute: "2-digit",
+                        hour12: true,
+                        timeZone: "Asia/Kolkata",
                       })}
                     </span>
                   )}
@@ -573,12 +575,6 @@ const TeacherAppointments = ({ refreshTrigger, onStatusUpdate }) => {
                         getSearchResultsCount() > 1 ? "s" : ""
                       } matching "${searchTerm}"`}
                 </span>
-                <button
-                  onClick={() => setSearchTerm("")}
-                  className="text-blue-600 hover:text-blue-700 font-medium text-sm underline"
-                >
-                  Clear search
-                </button>
               </div>
             </div>
           )}
@@ -749,6 +745,7 @@ const TeacherAppointments = ({ refreshTrigger, onStatusUpdate }) => {
                               weekday: "long",
                               month: "long",
                               day: "numeric",
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                           <div className="text-sm text-slate-500">
@@ -778,8 +775,10 @@ const TeacherAppointments = ({ refreshTrigger, onStatusUpdate }) => {
                             }`}
                           >
                             {appointmentDate.toLocaleTimeString("en-US", {
-                              hour: "2-digit",
+                              hour: "numeric",
                               minute: "2-digit",
+                              hour12: true,
+                              timeZone: "Asia/Kolkata",
                             })}
                           </div>
                           <div className="text-sm text-slate-500">

@@ -220,8 +220,10 @@ const TeacherDashboard = () => {
                       <span className="font-medium text-sm">
                         Updated:{" "}
                         {lastUpdated.toLocaleTimeString([], {
-                          hour: "2-digit",
+                          hour: "numeric",
                           minute: "2-digit",
+                          hour12: true,
+                          timeZone: "Asia/Kolkata",
                         })}
                       </span>
                     </div>
