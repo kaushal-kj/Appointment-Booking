@@ -156,7 +156,7 @@ const UpdateAvailability = ({ onSlotAdded }) => {
 
   return (
     <section className="mb-3">
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div className="sm:bg-white sm:rounded-2xl sm:p-6 sm:shadow-sm sm:border sm:border-gray-100">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>

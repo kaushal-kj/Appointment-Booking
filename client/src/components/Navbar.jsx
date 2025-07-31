@@ -174,12 +174,47 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             <button
               onClick={toggleMenu}
               className="text-xl text-blue-600 hover:text-blue-700 transition-colors duration-200 p-2 hover:bg-blue-50 rounded-lg"
             >
               {isOpen ? <FiX /> : <FiMenu />}
+            </button>
+          </div> */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="relative text-xl text-blue-600 hover:text-blue-700 transition-all duration-300 p-2 hover:bg-blue-50 rounded-lg group"
+            >
+              {/* Hamburger/Close Icon with Animation */}
+              <div className="relative w-4 h-4 flex items-center justify-center">
+                {/* Top line */}
+                <span
+                  className={`absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+                    isOpen 
+                      ? "rotate-45 translate-y-0" 
+                      : "-translate-y-1.5 rotate-0"
+                  }`}
+                />
+                {/* Middle line */}
+                <span
+                  className={`absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+                    isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+                  }`}
+                />
+                {/* Bottom line */}
+                <span
+                  className={`absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+                    isOpen 
+                      ? "-rotate-45 translate-y-0" 
+                      : "translate-y-1.5 rotate-0"
+                  }`}
+                />
+              </div>
+              
+              {/* Ripple effect on click */}
+              <div className="absolute inset-0 rounded-lg bg-blue-200 scale-0 group-active:scale-100 transition-transform duration-200 opacity-30"></div>
             </button>
           </div>
 
@@ -317,19 +352,19 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div
-          className="md:hidden fixed inset-0 top-16 bg-black/20 backdrop-blur-sm z-40"
+          className="md:hidden fixed inset-0 top-12 bg-black/20 backdrop-blur-sm z-40 "
           onClick={toggleMenu}
         >
           <div
             className="bg-white/95 backdrop-blur-md mx-4 mt-4 rounded-2xl shadow-2xl border border-blue-100 overflow-hidden max-h-[calc(100vh-6rem)] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="py-4">
+            <div className="py-2">
               {role === "student" && (
                 <>
                   <RouterLink
                     to="/student/dashboard"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                     onClick={toggleMenu}
                   >
                     <FiSettings className="text-lg" />
@@ -337,7 +372,7 @@ const Navbar = () => {
                   </RouterLink>
                   <RouterLink
                     to="/messages"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                     onClick={toggleMenu}
                   >
                     <FiMessageCircle className="text-lg" />
@@ -345,7 +380,7 @@ const Navbar = () => {
                   </RouterLink>
                   <RouterLink
                     to="/student/profile"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                   >
                     <FiUser />
                     <span className="font-medium text-lg">My Profile</span>
@@ -357,7 +392,7 @@ const Navbar = () => {
                 <>
                   <RouterLink
                     to="/teacher/dashboard"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                     onClick={toggleMenu}
                   >
                     <FiSettings className="text-lg" />
@@ -365,7 +400,7 @@ const Navbar = () => {
                   </RouterLink>
                   <RouterLink
                     to="/messages"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                     onClick={toggleMenu}
                   >
                     <FiMessageCircle className="text-lg" />
@@ -373,7 +408,7 @@ const Navbar = () => {
                   </RouterLink>
                   <RouterLink
                     to="/teacher/profile"
-                    className="flex items-center space-x-3 px-6 py-4 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
+                    className="flex items-center space-x-3 px-9 py-3 text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-200"
                   >
                     <FiUser />
                     <span className="font-medium text-lg">My Profile</span>
@@ -384,8 +419,8 @@ const Navbar = () => {
               {/* Mobile Quick Navigation for all roles */}
               {showQuickNav && (
                 <>
-                  <div className="border-t border-slate-200 my-2"></div>
-                  <div className="px-6 py-3">
+                  <div className="border-t border-slate-200 my-1"></div>
+                  <div className="px-9 py-1">
                     <span
                       className={`text-xs font-bold text-${themeColor}-600 uppercase tracking-wider`}
                     >
@@ -402,7 +437,7 @@ const Navbar = () => {
                         smooth={true}
                         offset={-120}
                         duration={500}
-                        className={`flex items-center space-x-3 px-8 py-4 text-slate-700 hover:text-${themeColor}-600 hover:bg-${themeColor}-50 transition-all duration-200 cursor-pointer border-l-4 border-transparent hover:border-${themeColor}-300`}
+                        className={`flex items-center space-x-3 px-8 py-3 text-slate-700 hover:text-${themeColor}-600 hover:bg-${themeColor}-50 transition-all duration-200 cursor-pointer border-l-4 border-transparent hover:border-${themeColor}-300`}
                         onClick={toggleMenu}
                       >
                         <IconComponent className={`text-lg ${link.color}`} />
@@ -436,13 +471,13 @@ const Navbar = () => {
 
               {/* Logout Button for Mobile */}
               {role !== null && (
-                <div className="px-4 py-4 mt-4 border-t border-slate-200">
+                <div className="px-5 py-3 mt-2 border-t border-slate-200">
                   <button
                     onClick={() => {
                       toggleMenu();
                       handleLogout();
                     }}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:from-orange-600 hover:to-orange-700"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl font-semibold text-lg transition-all duration-300 hover:from-orange-600 hover:to-orange-700"
                   >
                     Logout
                   </button>

@@ -244,7 +244,7 @@ const TeacherAppointments = ({ refreshTrigger, onStatusUpdate }) => {
   return (
     <section>
       {/* Section Header */}
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6">
+      <div className="sm:bg-white sm:rounded-2xl sm:p-6 sm:shadow-sm sm:border sm:border-gray-100 mb-6">
         <div className="flex flex-col  gap-4">
           {/* Title and Live Indicator */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
