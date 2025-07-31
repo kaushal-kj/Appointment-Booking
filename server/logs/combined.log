@@ -3901,3 +3901,139 @@
 [2025-07-31 02:05:17] [INFO] Teacher stats fetched for: 68831910293882f85560c49e
 [2025-07-31 02:05:35] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
 [2025-07-31 02:35:38] [INFO] LOGIN SUCCESS: admin - admin@example.com
+[2025-07-31 10:41:33] [INFO] LOGIN SUCCESS: student - test@yopmail.com
+[2025-07-31 10:41:33] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:41:33] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 10:41:33] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 10:54:14] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:54:41] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:54:53] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:55:38] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:56:14] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:56:26] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:56:32] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:56:34] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:56:36] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:57:07] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:57:09] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:57:18] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:57:45] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:57:59] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:58:01] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:58:03] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:58:12] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:58:37] [INFO] LOGIN SUCCESS: admin - admin@example.com
+[2025-07-31 10:59:22] [INFO] LOGIN SUCCESS: student - test@yopmail.com
+[2025-07-31 10:59:22] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 10:59:22] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 10:59:22] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 10:59:39] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:00:07] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:00:59] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:01:02] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:01:36] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:01:40] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:01:49] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:01:57] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:02:09] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:02:44] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:02:46] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:02:57] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:03:44] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 11:03:47] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:04:00] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:04:30] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:04:37] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:05:44] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:05:50] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:06:37] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:07:22] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:07:39] [INFO] LOGIN SUCCESS: admin - admin@example.com
+[2025-07-31 11:08:24] [INFO] LOGIN SUCCESS: student - test@yopmail.com
+[2025-07-31 11:08:24] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 11:08:24] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 11:08:24] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 12:26:29] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:31:31] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:31:36] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:31:43] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:31:52] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:31:52] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:31:52] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 12:33:42] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:33:45] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:34:30] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:34:30] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:34:30] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 12:36:09] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:36:16] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:36:16] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:36:16] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 12:36:50] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:37:23] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:37:42] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:37:47] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:02] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:06] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:08] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:12] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:16] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:38:49] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:38:52] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:38:56] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:38:58] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:02] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:04] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:21] [INFO] Teachers fetched with availability: 2 teachers
+[2025-07-31 12:39:21] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:21] [INFO] Student stats fetched for: 688332f5f60c894a428a9067
+[2025-07-31 12:39:28] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:34] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:37] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:41] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:43] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:47] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:39:50] [INFO] Student appointments fetched: 688332f5f60c894a428a9067
+[2025-07-31 12:40:30] [INFO] LOGIN SUCCESS: teacher - smith@college.com
+[2025-07-31 12:40:30] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:40:30] [INFO] Teacher stats fetched for: 68831910293882f85560c49e
+[2025-07-31 12:41:01] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:30] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:45] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:48] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:51] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:52] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:55] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:41:59] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:42:02] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:42:13] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:42:22] [INFO] Teacher profile fetched: 68831910293882f85560c49e
+[2025-07-31 12:42:35] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:42:35] [INFO] Teacher stats fetched for: 68831910293882f85560c49e
+[2025-07-31 12:43:04] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:43:07] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:43:29] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:43:32] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:43:55] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:43:58] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:08] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:11] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:12] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:14] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:39] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:44:40] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:45:09] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:45:25] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:45:56] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:46:05] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:46:06] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:46:34] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:46:49] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:46:55] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:47:05] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:47:14] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:47:17] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:47:47] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:48:01] [INFO] Teacher appointments fetched: 68831910293882f85560c49e
+[2025-07-31 12:48:01] [INFO] Teacher stats fetched for: 68831910293882f85560c49e
+[2025-07-31 12:48:31] [INFO] Teacher appointments fetched: 68831910293882f85560c49e

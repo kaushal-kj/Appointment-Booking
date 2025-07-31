@@ -6,7 +6,7 @@ import Teacher from "../models/Teacher.js";
 import Admin from "../models/Admin.js";
 import dotenv from "dotenv";
 import logger from "../utils/logger.js";
-import sendEmail from "../utils/SendEmail.js";
+import sendEmail from "../utils/sendEmail.js";
 import { generateResetPasswordEmail } from "../utils/emailTemplates.js";
 
 dotenv.config();
