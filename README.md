@@ -136,25 +136,31 @@ The application will be available at `http://localhost:5173`
 5. **Track Performance** - View booking statistics and student feedback
 
 ## 🗂️ Project Structure
-
-Appointment-Booking/\
-├── client/\
-│ ├── public/\
-│ ├── src/\
-│ │ ├── components/ # Reusable React components\
-│ │ ├── pages/ # Page components\
-│ │ ├── context/ # Context providers for state management\
-│ │ ├── utils/ # Utility functions and helpers\
-│ │ ├── styles/ # CSS and styling files\
-│ │ └── App.js # Main App component\
-│ └── package.json\
-├── server/\
-│ ├── controllers/ # Route controllers\
-│ ├── middleware/ # Custom middleware functions\
-│ ├── models/ # MongoDB schemas\
-│ ├── routes/ # Express routes\
-│ ├── utils/ # Utility functions\
-│ └── server.js # Main server file\
+Appointment-Booking
+├── client
+│   ├── public
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── config
+│   │   ├── pages
+│   │   ├── redux
+│   │   ├── services
+│   │   └── styles
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── index.html
+├── server
+│   ├── config
+│   ├── controller
+│   ├── logs
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── services
+│   ├── utils
+│   └── server.js
 └── README.md
 
 
