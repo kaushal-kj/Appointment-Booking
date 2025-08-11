@@ -112,13 +112,6 @@ const TeacherDashboard = () => {
     };
   };
 
-  const weeklyChangeDisplay = getChangeDisplay(stats.weeklyChange);
-  const todayChangeDisplay = getChangeDisplay(
-    stats.approvedToday - stats.approvedYesterday,
-    "number"
-  );
-  const studentGrowthDisplay = getChangeDisplay(stats.studentGrowth);
-
   const statCards = [
     {
       title: "Total Appointments",
@@ -127,7 +120,6 @@ const TeacherDashboard = () => {
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-600",
-      change: weeklyChangeDisplay,
     },
     {
       title: "Pending Requests",
@@ -136,11 +128,6 @@ const TeacherDashboard = () => {
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
       textColor: "text-orange-600",
-      change: {
-        text: stats.pendingRequests > 0 ? "Need attention" : "All clear",
-        icon: null,
-        color: stats.pendingRequests > 0 ? "text-orange-600" : "text-green-600",
-      },
     },
     {
       title: "Approved Today",
@@ -149,7 +136,6 @@ const TeacherDashboard = () => {
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       textColor: "text-green-600",
-      change: todayChangeDisplay,
     },
     {
       title: "Active Students",
@@ -158,7 +144,6 @@ const TeacherDashboard = () => {
       color: "from-cyan-500 to-cyan-600",
       bgColor: "bg-cyan-50",
       textColor: "text-cyan-600",
-      change: studentGrowthDisplay,
     },
   ];
 
@@ -292,24 +277,6 @@ const TeacherDashboard = () => {
                   </div>
                   <div className="text-slate-600 font-medium mb-2">
                     {stat.title}
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    {isLoading ? (
-                      <div className="animate-pulse bg-gray-300 h-4 w-20 rounded"></div>
-                    ) : (
-                      <>
-                        {stat.change.icon && (
-                          <stat.change.icon
-                            className={`text-sm ${stat.change.color}`}
-                          />
-                        )}
-                        <span
-                          className={`text-xs font-medium ${stat.change.color}`}
-                        >
-                          {stat.change.text}
-                        </span>
-                      </>
-                    )}
                   </div>
                 </div>
               ))}

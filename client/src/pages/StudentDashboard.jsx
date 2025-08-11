@@ -111,8 +111,6 @@ const StudentDashboard = () => {
 
   const academicYearInfo = getFlexibleAcademicYear();
 
-  const changeDisplay = getChangeDisplay(stats.monthlyChange);
-
   const statCards = [
     {
       title: "Total Appointments",
@@ -252,24 +250,6 @@ const StudentDashboard = () => {
                     </div>
                   </div>
                   <div className="text-slate-600 font-medium">{stat.title}</div>
-                  <div className="mt-2 flex items-center space-x-1">
-                    {isLoading ? (
-                      <div className="animate-pulse bg-gray-300 h-4 w-20 rounded"></div>
-                    ) : (
-                      <>
-                        {changeDisplay.icon && (
-                          <changeDisplay.icon
-                            className={`text-sm ${changeDisplay.color}`}
-                          />
-                        )}
-                        <span
-                          className={`text-sm font-medium ${changeDisplay.color}`}
-                        >
-                          {changeDisplay.text}
-                        </span>
-                      </>
-                    )}
-                  </div>
                 </div>
               ))}
             </div>
