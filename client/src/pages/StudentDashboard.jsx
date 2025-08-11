@@ -19,6 +19,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 import { Element } from "react-scroll";
+import { useRef } from "react";
 
 const StudentDashboard = () => {
   const { user } = useSelector((state) => state.auth);
@@ -33,6 +34,9 @@ const StudentDashboard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  const intervalRef = useRef(null);
 
   // Fetch real stats from API
   const fetchStats = async () => {
@@ -63,7 +67,16 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     fetchStats();
-  }, []);
+    intervalRef.current = setInterval(() => {
+      fetchStats(false);
+    }, 30000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [refreshTrigger]);
 
   // Format monthly change display
   const getChangeDisplay = (change) => {
@@ -138,6 +151,7 @@ const StudentDashboard = () => {
   const handleRefreshStats = () => {
     showToast.info("Refreshing dashboard...");
     fetchStats();
+    setRefreshTrigger((prev) => prev + 1);
   };
 
   return (
@@ -284,7 +298,10 @@ const StudentDashboard = () => {
 
           <Element name="myAppointments">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-3">
-              <MyAppointments onAppointmentUpdate={fetchStats} />
+              <MyAppointments
+                onAppointmentUpdate={fetchStats}
+                refreshTrigger={refreshTrigger}
+              />
             </div>
           </Element>
           <Element name="contact">

@@ -18,8 +18,9 @@ import {
   FiSearch, // Add search icon
   FiX, // Add X icon for clear button
 } from "react-icons/fi";
+import { useRef } from "react";
 
-const MyAppointments = () => {
+const MyAppointments = ({refreshTrigger}) => {
   const [appointments, setAppointments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filter, setFilter] = useState("all");
@@ -27,9 +28,21 @@ const MyAppointments = () => {
   const [lastUpdated, setLastUpdated] = useState(null); // Add last updated state
   const [statusDropdownOpen, setStatusDropdownOpen] = useState(false);
 
+  const intervalRef = useRef(null);
+
   useEffect(() => {
     fetchAppointments();
-  }, []);
+    intervalRef.current = setInterval(() => {
+      fetchAppointments(false);
+    }, 30000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [refreshTrigger]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(".relative")) {

@@ -20,6 +20,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 import { Element } from "react-scroll";
+import { useRef } from "react";
 
 const TeacherDashboard = () => {
   const { user } = useSelector((state) => state.auth);
@@ -39,6 +40,8 @@ const TeacherDashboard = () => {
   const [error, setError] = useState(null);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [lastUpdated, setLastUpdated] = useState(null);
+
+  const intervalRef = useRef(null);
 
   // Function to refresh appointments data
   const refreshAppointments = () => {
@@ -75,6 +78,15 @@ const TeacherDashboard = () => {
 
   useEffect(() => {
     fetchStats();
+    intervalRef.current = setInterval(() => {
+      fetchStats(false);
+    }, 30000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [refreshTrigger]);
 
   // Format change display
